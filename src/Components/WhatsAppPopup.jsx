@@ -54,13 +54,18 @@ const WhatsAppPopup = () => {
             }}
           >
             <p style={{ margin: 0, fontWeight: 500 }}>Chat with us on WhatsApp!</p>
+            <p style={{ margin: '8px 0 0 0', fontSize: 14, color: '#444' }}>
+              We are here to help you with any queries or support.<br />
+              <strong>Business Hours:</strong><br />
+              Mon-Sat: 9:00 AM - 7:00 PM
+            </p>
             <a
               href={`https://wa.me/${whatsappNumber}`}
               target="_blank"
               rel="noopener noreferrer"
               style={{
                 display: 'inline-block',
-                marginTop: 10,
+                marginTop: 12,
                 background: '#25d366',
                 color: '#fff',
                 padding: '8px 16px',
