@@ -2,22 +2,21 @@ import React from "react";
 import "./TeamPage.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-
+import person1 from "./logo/person 1.jpg";
+import person2 from "./logo/Person 2.jpg";
 
 // Team Members Data (Static)
 const teamMembers = [
   {
     name: "Satish Malviya",
     role: "Founder",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWYFmbCJ-t3z6Z7pt5F0-GBPLBvS4Y2-ccHw&s",
+    image: person1,
     bio: "Satish Malviya is the visionary behind our company. With dedication and leadership, he has laid the foundation for delivering top-quality UPVC solutions.",
   },
   {
     name: "Mahesh Malviya",
     role: "Administrative Officer",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWYFmbCJ-t3z6Z7pt5F0-GBPLBvS4Y2-ccHw&s",
+    image: person2,
     bio: "Mahesh Malviya manages administrative operations efficiently, ensuring smooth workflows and organizational growth.",
   },
   {
