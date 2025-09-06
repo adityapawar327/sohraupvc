@@ -9,15 +9,29 @@ lerna-debug.log*
 
 # Dependency directories
 node_modules
+/.pnp
+.pnp.js
 
 # Build directories
 dist
 dist-ssr
+build
+out
 *.local
+
+# Testing
+/coverage
+.nyc_output
+
+# Environment files
+.env
+.env.*
+!.env.example
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
+!.vscode/settings.json
 .idea
 .DS_Store
 *.suo
@@ -25,3 +39,18 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?  # swap files
+
+# Cache and temp files
+.cache
+.temp
+.eslintcache
+.next
+.vercel
+.npm
+
+# Misc
+*.pem
+Thumbs.db
+*.bak
+.DS_Store
+desktop.ini
