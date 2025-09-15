@@ -1,0 +1,226 @@
+/* =======================
+   Team Page Header
+======================= */
+.team-header {
+  background: white;
+  color: black;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.team-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.team-header p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+/* =======================
+   Team Container
+======================= */
+.team-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Team Card */
+.team-card {
+  background: #f9f9f9;
+  border-radius: 15px;
+  text-align: center;
+  padding: 25px 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.team-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #003366;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team-card h2 {
+  margin-top: 15px;
+  font-size: 1.3rem;
+  color: #003366;
+}
+
+.team-card .role {
+  font-size: 1rem;
+  color: #666;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.team-card .bio {
+  font-size: 0.9rem;
+  color: #444;
+  margin: 10px 0;
+  line-height: 1.4;
+}
+
+/* Social Links */
+.socials {
+  margin-top: 12px;
+}
+
+.socials a {
+  margin: 0 10px;
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: #003366;
+  transition: color 0.3s;
+}
+
+.socials a:hover {
+  color: #ff6600;
+}
+
+/* =======================
+   Completed Projects Section
+======================= */
+.project-header {
+  background: #f4f4f4;
+  color: black;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 40px;
+  border-top: 2px solid #ddd;
+}
+
+.project-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #003366;
+}
+
+.project-header p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.project-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Project Card */
+.project-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-card h2 {
+  font-size: 1.2rem;
+  margin: 15px;
+  color: #003366;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  margin: 0 15px 15px;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* =======================
+   Footer
+======================= */
+.team-footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* =======================
+   Responsive Tweaks
+======================= */
+@media (max-width: 768px) {
+  .team-header h1,
+  .project-header h1 {
+    font-size: 2rem;
+  }
+
+  .team-header p,
+  .project-header p {
+    font-size: 1rem;
+  }
+
+  .team-card img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .team-card h2,
+  .project-card h2 {
+    font-size: 1.1rem;
+  }
+
+  .team-card .bio,
+  .project-card p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-header h1,
+  .project-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .team-header p,
+  .project-header p {
+    font-size: 0.9rem;
+  }
+
+  .team-card {
+    padding: 20px 15px;
+  }
+
+  .team-card img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .socials a {
+    font-size: 1.2rem;
+  }
+}

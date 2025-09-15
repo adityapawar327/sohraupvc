@@ -1,0 +1,17 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location (update this when you have a sitemap)
+Sitemap: https://sohraupvc.com/sitemap.xml
+
+# Crawl-delay to prevent server overload
+Crawl-delay: 10
+
+# Disallow development and admin areas (if any)
+Disallow: /admin/
+Disallow: /dev/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /*.json$
+Disallow: /*?*
