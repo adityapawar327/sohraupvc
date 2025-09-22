@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { motion } from "framer-motion";
 import upvcImg from "./logo/upvc.png"; // ✅ correct relative path
 
 export default function AboutUs() {
+  const [showVideo, setShowVideo] = useState(false);
+
+  const handleCloseVideo = () => {
+    setShowVideo(false);
+  };
+
   return (
     <>
       <Navbar />
@@ -91,6 +97,75 @@ export default function AboutUs() {
             />
           </motion.div>
         </div>
+
+        {/* Discover Our Story Button Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          style={{
+            maxWidth: "1200px",
+            margin: "60px auto",
+            textAlign: "center",
+          }}
+        >
+          <motion.button
+            onClick={() => setShowVideo(true)}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            style={{
+              fontSize: "clamp(1.2rem, 2vw, 1.5rem)",
+              padding: "15px 30px",
+              backgroundColor: "#1788c7",
+              color: "white",
+              border: "none",
+              borderRadius: "8px",
+              cursor: "pointer",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+              fontWeight: "bold",
+            }}
+          >
+            Discover Our Story
+          </motion.button>
+        </motion.div>
+
+        {/* Video Modal */}
+        {showVideo && (
+          <div className="video-modal" onClick={handleCloseVideo}>
+            <div className="video-modal-outer">
+              <div className="video-modal-container">
+                <div className="video-modal-content" onClick={e => e.stopPropagation()}>
+                  <button className="close-modal-btn" onClick={handleCloseVideo}>
+                    ×
+                  </button>
+                  <div style={{
+                    padding:'56.25% 0 0 0',
+                    position:'relative',
+                    maxWidth: '900px',
+                    margin: '0 auto',
+                    width: '100%',
+                  }}>
+                    <iframe
+                      src="https://player.vimeo.com/video/1120800744?autoplay=1&title=0&byline=0&portrait=0&controls=0&sidedock=0&badge=0&background=1&muted=0"
+                      style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '100%',
+                        border: 'none',
+                      }}
+                      frameBorder="0"
+                      allow="autoplay; fullscreen; picture-in-picture"
+                      allowFullScreen
+                      title="Sohra UPVC Industries Story"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Mission, Vision, Values Section */}
         <div
